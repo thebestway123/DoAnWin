@@ -14,7 +14,7 @@ namespace TradingManagementSystem
         }
         SqlCommand sqlCommand; //dung de truy van cac cau lenh insert, update delete, ...
         SqlDataReader dataReader; //dung de doc du lieu trong bang
-        public List<TaiKhoan> taiKhoans (string query)
+        public List<TaiKhoan> TaiKhoans(string query)//check tai khoan
         {
             List<TaiKhoan> taiKhoans= new List<TaiKhoan>();
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
@@ -30,6 +30,16 @@ namespace TradingManagementSystem
                 sqlConnection.Close();
             }
             return taiKhoans;   
+        }
+        public void Command(string query)//dung de dang ki tai khoan
+        {
+            using(SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand= new SqlCommand(query, sqlConnection);
+                sqlCommand.ExecuteNonQuery();//thuc thi cau truy van
+                sqlConnection.Close();
+            }
         }
     }
 }

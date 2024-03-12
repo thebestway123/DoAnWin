@@ -30,7 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox_TenTaiKhoan = new System.Windows.Forms.TextBox();
+            this.textBox_TaiKhoan = new System.Windows.Forms.TextBox();
             this.textBox_MatKhau = new System.Windows.Forms.TextBox();
             this.QuenMatKhauLabel = new System.Windows.Forms.LinkLabel();
             this.DangKyLabel = new System.Windows.Forms.LinkLabel();
@@ -61,14 +61,14 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox_TenTaiKhoan
+            // textBox_TaiKhoan
             // 
-            this.textBox_TenTaiKhoan.Location = new System.Drawing.Point(158, 203);
-            this.textBox_TenTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_TenTaiKhoan.Name = "textBox_TenTaiKhoan";
-            this.textBox_TenTaiKhoan.Size = new System.Drawing.Size(184, 23);
-            this.textBox_TenTaiKhoan.TabIndex = 2;
-            this.textBox_TenTaiKhoan.TextChanged += new System.EventHandler(this.TenTaiKhoan_TextChanged);
+            this.textBox_TaiKhoan.Location = new System.Drawing.Point(158, 203);
+            this.textBox_TaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TaiKhoan.Name = "textBox_TaiKhoan";
+            this.textBox_TaiKhoan.Size = new System.Drawing.Size(184, 23);
+            this.textBox_TaiKhoan.TabIndex = 2;
+            this.textBox_TaiKhoan.TextChanged += new System.EventHandler(this.TenTaiKhoan_TextChanged);
             // 
             // textBox_MatKhau
             // 
@@ -120,7 +120,7 @@
             this.Controls.Add(this.DangKyLabel);
             this.Controls.Add(this.QuenMatKhauLabel);
             this.Controls.Add(this.textBox_MatKhau);
-            this.Controls.Add(this.textBox_TenTaiKhoan);
+            this.Controls.Add(this.textBox_TaiKhoan);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -138,7 +138,7 @@
 
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private TextBox textBox_TenTaiKhoan;
+        private TextBox textBox_TaiKhoan;
         private TextBox textBox_MatKhau;
         private LinkLabel QuenMatKhauLabel;
         private LinkLabel DangKyLabel;

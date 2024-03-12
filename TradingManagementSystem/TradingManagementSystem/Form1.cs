@@ -1,4 +1,5 @@
 ﻿namespace TradingManagementSystem
+
 {
     public partial class DangNhap : Form
     {
@@ -18,20 +19,26 @@
             QuenMatKhau quenMatKhau = new QuenMatKhau();
             quenMatKhau.ShowDialog();
         }
-
+        Modify modify = new Modify();
         private void button1_Click(object sender, EventArgs e)
         {
-            string tentk = textBox_TenTaiKhoan.Text;
+            string tentk = textBox_TaiKhoan.Text;
             string matkhau = textBox_MatKhau.Text;
             if (tentk.Trim() == "") { MessageBox.Show("Vui long nhap ten tai khoan"); return; }
             else if (matkhau.Trim() == "") { MessageBox.Show("Vui long nhap mat khau"); return; }
             else 
             {
                 string query = "Select * from TaiKhoan where TenTaiKhoan = '"+tentk+"' and MatKhau = '"+matkhau+"'";
-                if (modify.Taikhoans(query).Count != 0)
+                if (modify.TaiKhoans(query).Count != 0)
                 {
-                    MessageBox.Show("Đăng Nhập Thành Công");
+                    MessageBox.Show("Đăng Nhập Thành Công", "Thông Báo",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else
+                {
+                    MessageBox.Show("Tên Đăng Nhập Hoặc Mật Khẩu Không Chính Xác", "Thông Báo",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }    
             }
 
         }
